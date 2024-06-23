@@ -1,0 +1,235 @@
+/* 
+.scrollable-table-container {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .fixed-columns {
+    position: sticky;
+    left: 0;
+    z-index: 10;
+    background: white;
+  }
+  
+  .fixed-columns .fixed-table {
+    border-collapse: collapse;
+  }
+  
+  .fixed-columns th, .fixed-columns td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .scrollable-columns {
+    overflow-y: auto;
+    max-height: 300px; 
+  }
+  
+  .scrollable-columns .scrollable-table {
+    border-collapse: collapse;
+  }
+  
+  .scrollable-columns th, .scrollable-columns td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .scrollable-columns th {
+    background-color: #f2f2f2;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .scrollable-columns td button {
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+ 
+  .ReactModal__Overlay {
+    background-color: rgba(0, 0, 0, 0.75) !important;
+  }
+  
+  .ReactModal__Content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    overflow: auto;
+    outline: none;
+    padding: 20px;
+    max-width: 80%;
+    max-height: 80%;
+  }
+   */
+
+
+
+   /* src/components/ScrollableTable.css */
+.scrollable-table-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.fixed-columns {
+  position: sticky;
+  left: 0;
+  z-index: 10;
+  background: white;
+}
+
+.fixed-columns .fixed-table {
+  border-collapse: collapse;
+  width: 100%;
+  height: 160px;
+}
+
+.fixed-columns th, .fixed-columns td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.fixed-columns th {
+  background-color: #e6f7ff; /* Light blue for header background */
+  font-weight: bold;
+}
+
+.scrollable-columns {
+  overflow-y: auto;
+  left: 0;
+  z-index: 10;
+  background: white;
+}
+
+.scrollable-columns .scrollable-table {
+  border-collapse: collapse;
+  width: 100%;
+  height: 100%;
+}
+
+.scrollable-columns th,
+.scrollable-columns td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.scrollable-table td{
+  border: none;
+  height: 100%;
+}
+.scrollable-columns th {
+  background-color: #06f812; /* Light blue for header background */
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.scrollable-columns td {
+  background-color: #eaffea;
+  /* Light green for cell background */
+}
+
+.scrollable-columns td input {
+  /* width: 100%; */
+  border: 1px solid #ddd;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.scrollable-columns td button {
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #eef3ef;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.scrollable-columns td button:hover {
+  background-color: #f0f7f0;
+}
+
+.col1{
+  /* width: 20vh; */
+  border: 1px solid red;
+}
+
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  /* border: 2px solid red; */
+  /* height: auto; */
+  /* width: 100%; */
+  gap: 20px; /* Adjust the gap size as needed */
+}
+
+.icon-container svg {
+  cursor: pointer;
+  /* border: 2px solid red; */
+}
+
+
+/* Modal styles */
+.ReactModal__Overlay {
+  background-color: rgba(0, 0, 0, 0.75) !important;
+}
+
+.ReactModal__Content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  overflow: auto;
+  outline: none;
+  padding: 20px;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+/* Additional styling for better appearance */
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+td, th {
+  text-align: left;
+}
+
+.fixed-table th, .scrollable-table th {
+  color: #333;
+  font-size: 14px;
+}
+
+.fixed-table td, .scrollable-table td {
+  font-size: 13px;
+}
+
+.fixed-columns th {
+  color: #333;
+}
+
+.scrollable-columns th {
+  color: #333;
+}
+
+td, th {
+  padding: 10px;
+}
